@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+*, ::before, ::after{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color: rgb(251, 207, 40);
+background-image: linear-gradient(90deg, rgba(89, 131, 252, 1) 0%, rgba(41, 53, 86, 1) 100%),  url(https://img.icons8.com/android/2x/happy.png);
+background-size: cover;
+background-position: left top;
+background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator{
+    height: 60vh;
+    min-width: 45vh;
+    max-width: 45vh;
+}
+.display{
+    width: 100%;
+    height: 20%;
+    max-height: min-content;
+    background: rgba(43, 51, 67, 0.221);
+    text-align: right;
+    color: white;
+    -webkit-box-shadow: 7px 12px 34px -5px rgba(6, 63, 90, 1);
+    -moz-box-shadow: 7px 12px 34px -5px rgba(6, 63, 90, 1);
+    box-shadow: 7px 12px 34px -5px rgba(6, 63, 90, 1);
+    word-break: break-all;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 5%;
+    border-radius: 15px;
+}
+.currentNumber{
+    font-size: 3.5vh;
+    font-weight: 600;
+}
+.previousNumber{
+    color: rgb(183, 183, 183);
+    font-size: 130%;
+}
+.mathSign{
+    font-size: 100%;
+}
+.panel{
+    margin-top: 1%;
+   height: 80%;
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   grid-template-rows: repeat(5,1fr);
+   gap: 0.5%;
+}
+.panel button{
+    font-size: 2em;
+    font-weight: 500;
+    background-color: rgba(14, 23, 41, 0.525);
+    border: 0px solid;
+    border-radius: 10px;
+    color: white;
+    transition: all .2s ease-in-out;
+}
+.equals{
+    grid-column: -1/-3;
+}
+button:hover{
+    background-color: rgba(3, 13, 34, 0.745);
+}
+button:active{
+    background-color: rgba(25, 51, 102, 0.745);
+    transition: .2s ease-in;
+}
